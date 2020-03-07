@@ -7,7 +7,7 @@ export default {
   name: "Worker",
   data() {
     return {
-      type: Math.floor(Math.random() * 10) + 1
+      type: Math.floor(Math.random() * 30) + 1
     };
   }
 };

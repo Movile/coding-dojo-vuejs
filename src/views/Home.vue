@@ -27,8 +27,12 @@
     </section>
     <hr />
     <section class="office">
-      <Computer v-for="index in computers" :key="`computer-${index}`" />
-      <Worker v-for="index in workers" :key="`worker-${index}`" />
+      <section class="office__computers">
+        <Computer v-for="index in computers" :key="`computer-${index}`" />
+      </section>
+      <section class="office__workers">
+        <Worker v-for="index in workers" :key="`worker-${index}`" />
+      </section>
     </section>
   </div>
 </template>
@@ -138,8 +142,27 @@ export default {
 }
 
 .office {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  background: url("../assets/office.png");
+  height: 300px;
+
+  &__computers {
+    display: flex;
+    position: absolute;
+    bottom: 90px;
+    left: 25px;
+    z-index: 1;
+  }
+
+  &__workers {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    z-index: 1;
+  }
 }
 </style>
