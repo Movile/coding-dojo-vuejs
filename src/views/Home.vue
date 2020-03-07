@@ -13,14 +13,17 @@
       <div class="inventory__row">
         <img class="inventory__computer" src="../assets/buy_computer.png" />
         <b>COMPUTADORES:</b> {{ computers }}
-        <button class="inventory__buy" @click="buyItem('computers')">
+        <button
+          class="inventory__buy buy_computer"
+          @click="buyItem('computers')"
+        >
           Comprar (50 clicks)
         </button>
       </div>
       <div class="inventory__row">
         <img class="inventory__worker" src="../assets/buy_worker.png" />
         <b>FUNCIONÁRIOS:</b> {{ workers }}
-        <button class="inventory__buy" @click="buyItem('workers')">
+        <button class="inventory__buy buy_worker" @click="buyItem('workers')">
           Comprar (100 clicks)
         </button>
       </div>
